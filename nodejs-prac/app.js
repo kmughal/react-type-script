@@ -7,7 +7,6 @@ const path = require('path');
 
 const routes = express.Router();
 
-
 app.use(express.static(path.join(__dirname, '/public/')));
 app.use('/js', express.static(path.join(__dirname, '/public/', '/js/')));
 app.set('views', './src/views/');
