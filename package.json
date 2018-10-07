@@ -6,9 +6,9 @@
   "author": "khurram shahzad",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --watch",
+    "build": "webpack --p --watch",
     "start": "nodemon node dist/index.bundle.js",
-    "test": "jest",
+    "test": "jest --coverage",
     "compile": "tsc"
   },
   "devDependencies": {
@@ -42,7 +42,7 @@
     "whatwg-fetch": "*"
   },
   "dependencies": {
-    "express": "^4.16.3",
-    "axios": "*"
+    "axios": "*",
+    "express": "^4.16.3"
   }
 }

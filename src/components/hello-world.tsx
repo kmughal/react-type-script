@@ -1,13 +1,14 @@
-import * as React from "react";
-import { render } from "react-dom";
-import { WorldPopulationService } from "../service/world-population-service";
-import { HelloWorldViewModel } from "../models/hello-world-view-model";
-import { WorldPopulationBox } from "./world-population-box";
+import * as React from "react"
+import { render } from "react-dom"
+import { WorldPopulationService } from "../service/world-population-service"
+import { HelloWorldViewModel } from "../models/hello-world-view-model"
+import { WorldPopulationBox } from "./world-population-box"
+import { JobSearchBar } from "./job-search" 
 
 export class HelloWorld extends React.Component<{}, HelloWorldViewModel> {
   constructor() {
     super({});
-    this.updateState(HelloWorldViewModel.createEmptyViewModel());
+    this.state = HelloWorldViewModel.createEmptyViewModel();
   }
 
   updateState = (vm: HelloWorldViewModel) => this.setState(vm);
@@ -37,8 +38,14 @@ export class HelloWorld extends React.Component<{}, HelloWorldViewModel> {
       <div>
         <h1>World Population React sample App.</h1>
         <WorldPopulationBox {...worldPopulationProps} />
-        <br/>
-        <button onClick={this.getRecords.bind(this)}>Get UK Population Data</button>
+        <br />
+        <button onClick={this.getRecords.bind(this)}>
+          Get UK Population Data
+        </button>
+        <br />
+        <div>
+        <JobSearchBar />
+        </div>
       </div>
     );
   }
