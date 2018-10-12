@@ -11,12 +11,22 @@
 
 <body>
     <h1>Hello from ejs</h1>
-    <%for(let index =0;index<books.length;index++){%>
+    
+    <%for(let index =0;index< books.length;index++){%>
     <div>
         Name=
         <%=books[index].name%>
         Author =
         <%=books[index].author%>
+    </div>
+    <%}%>
+
+    <%if (item) {%>
+    <div>
+        <h2><%=item.Name%></h2>
+        <p>
+            <%=item.Description%>
+        </p>
     </div>
     <%}%>
 </body>
