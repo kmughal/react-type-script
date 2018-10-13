@@ -1,0 +1,28 @@
+body {
+  background: #f5f5f5;
+}
+
+.login-container {
+  width: 500px;
+  margin: auto;
+
+}
+
+.input-group {
+  padding: 10px 10px;
+}
+
+.input-group label {
+  font-weight: 600;
+}
+
+.input-group input {
+  height: 30px;
+  width: 80%;
+}
+
+
+.input-group input[type="submit"] {
+  padding:10px 10px;
+  
+}
